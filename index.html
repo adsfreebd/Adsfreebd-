@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- External Scripts (ADS - DO NOT REMOVE) -->
+    <script
+  async="async"
+  data-cfasync="false"
+  src="https://pl28087364.effectivegatecpm.com/5f0b65d762714132d66c6ba8945349f3/invoke.js"
+></script>
+<div id="container-5f0b65d762714132d66c6ba8945349f3"></div>    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Earning App</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+    <!-- NEW AD SCRIPT (Interstitial) -->
+    <script src='//libtl.com/sdk.js' data-zone='10347382' data-sdk='show_10347382'></script>
+
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #28a745;
+            --background-color: #f0f2f5;
+            --card-background: #ffffff;
+            --text-color: #333333;
+            --light-text-color: #888888;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            margin: 0;
+            padding-bottom: 60px;
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 450px;
+            margin: 0 auto;
+            background-color: var(--card-background);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            background-color: var(--card-background);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 12px;
+            border: 2px solid var(--primary-color);
+            background-color: #eee;
+            object-fit: cover;
+        }
+
+        .header-user-info {
+            flex-grow: 1;
+        }
+
+        .header-user-info h3 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .user-id-wrapper {
+            display: flex;
+            align-items: center;
+            font-size: 11px;
+            color: var(--light-text-color);
+            margin-top: 2px;
+        }
+        .copy-icon {
+            font-size: 12px;
+            margin-left: 5px;
+            cursor: pointer;
+            color: var(--primary-color);
+            padding: 2px;
+        }
+        .copy-icon:active {
+            transform: scale(0.9);
+        }
+        
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .card {
+            background-color: var(--background-color);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        /* ----- MODERN TASK CARD DESIGN (SCREENSHOT STYLE) ----- */
+        .task-card-modern {
+            background-color: #fff;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+            text-align: left;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all 0.3s;
+            position: relative;
+        }
+        .task-card-modern.active-task {
+            border-color: var(--primary-color);
+            background-color: #fcffff;
+            box-shadow: 0 4px 12px rgba(0,123,255,0.1);
+        }
+        .task-card-modern.locked-task {
+            opacity: 0.6;
+            background-color: #f9f9f9;
+            cursor: not-allowed;
+            filter: grayscale(1);
+        }
+        .task-title-modern {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+        }
+        .status-badge {
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #fff;
+            background: #999;
+        }
+        .badge-active { background: #28a745; }
+        .badge-locked { background: #dc3545; }
+
+        .task-meta-modern {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        .task-meta-modern i, .task-meta-modern span.material-icons {
+            font-size: 14px;
+            margin-right: 4px;
+            color: #00c853; 
+        }
+        .task-meta-divider {
+            margin: 0 8px;
+            color: #ccc;
+        }
+        .task-progress-info {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        .task-progress-bg {
+            background-color: #f1f1f1;
+            height: 6px;
+            border-radius: 3px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 5px;
+        }
+        .task-progress-fill-modern {
+            background-color: #00c853; /* Bright Green */
+            height: 100%;
+            width: 0%; 
+            border-radius: 3px;
+            transition: width 0.5s ease;
+        }
+        .task-price-tag {
+            float: right;
+            font-size: 15px;
+            font-weight: 500;
+            color: #555;
+            margin-top: 5px;
+        }
+        .timer-display {
+            font-size: 11px;
+            color: #d32f2f;
+            font-weight: bold;
+            margin-top: 5px;
+            display: none;
+        }
+        /* -------------------------------------------------- */
+
+        .card-header {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .card-header .material-icons, .card-header .fa-solid, .card-header .fa-brands {
+            margin-right: 8px;
+            color: var(--primary-color);
+        }
+
+        .balance-card .balance {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin: 10px 0;
+        }
+
+        .card-label {
+            font-size: 14px;
+            color: var(--light-text-color);
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .dashboard-item {
+            background-color: var(--card-background);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .dashboard-item .material-icons {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .dashboard-item-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-color);
+        }
+
+        .dashboard-item-label {
+            font-size: 12px;
+            color: var(--light-text-color);
+        }
+
+        .primary-btn, .secondary-btn {
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        
+        .primary-btn .material-icons, .secondary-btn .material-icons, .secondary-btn .fa-brands {
+            font-size: 20px;
+        }
+
+        .primary-btn {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        .primary-btn:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        
+        .primary-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .secondary-btn {
+            background-color: #f0f0f0;
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .secondary-btn:hover {
+            background-color: #e0e0e0;
+            transform: translateY(-2px);
+        }
+        
+        .progress-bar-container {
+            height: 10px;
+            background-color: #eee;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: var(--primary-color);
+            width: 0;
+            transition: width 0.5s ease-in-out;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            max-width: 450px;
+            background-color: var(--card-background);
+            border-top: 1px solid var(--border-color);
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            cursor: pointer;
+            color: var(--light-text-color);
+            transition: color 0.3s;
+            flex: 1;
+        }
+
+        .nav-item .material-icons, .nav-item .fa-solid {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .nav-item-label {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .nav-item.active {
+            color: var(--primary-color);
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        .page.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .profile-info, .withdraw-form-container, .support-form-container {
+            background-color: var(--card-background);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            margin-top: 20px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .profile-pic-container {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #eee;
+            margin: 0 auto 15px;
+            overflow: hidden;
+            border: 3px solid var(--primary-color);
+        }
+        .profile-pic {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .profile-info-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .profile-info-row:last-child {
+            border-bottom: none;
+        }
+        .profile-label { font-size: 16px; color: var(--text-color); }
+        .profile-value { font-size: 16px; font-weight: 600; color: var(--primary-color); }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-sizing: border-box;
+            font-size: 16px;
+            font-family: inherit;
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal.active {
+            display: flex;
+        }
+        .modal-content {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            width: 85%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            animation: modalPop 0.3s ease-out;
+            border: 1px solid #ddd;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        @keyframes modalPop {
+            from {transform: scale(0.8); opacity: 0;}
+            to {transform: scale(1); opacity: 1;}
+        }
+        
+        .close-modal-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #888;
+            cursor: pointer;
+            line-height: 1;
+            transition: color 0.3s;
+        }
+        .close-modal-btn:hover {
+            color: #d32f2f;
+        }
+
+        .notice-title {
+            color: #d32f2f;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            margin-top: 10px;
+        }
+        .notice-body {
+            font-size: 14px;
+            color: #333;
+            text-align: left;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .upload-section {
+            margin-top: 15px;
+            text-align: left;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+        .upload-label {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: block;
+            color: #555;
+        }
+        .file-input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+        .upload-status {
+            font-size: 12px;
+            color: #28a745;
+            margin-top: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img id="header-profile-pic" src="https://via.placeholder.com/40" alt="Profile" class="header-profile-pic" onerror="this.src='https://via.placeholder.com/40';">
+            <div class="header-user-info">
+                <h3 id="header-user-name">User</h3>
+                <div class="user-id-wrapper">
+                    ID: <span id="header-user-id">...</span>
+                    <span class="material-icons copy-icon" id="header-copy-btn" title="Copy ID">content_copy</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <section id="home-page" class="page active">
+                <div class="card balance-card">
+                    <h2 class="card-header">
+                        <span class="material-icons">account_balance_wallet</span>
+                        My Balance
+                    </h2>
+                    <div class="balance" id="current-balance">BDT 0.00</div>
+                    <button class="primary-btn" id="start-earning-btn">
+                        Start Earning Now <span class="material-icons">arrow_forward</span>
+                    </button>
+                    <button class="secondary-btn" id="withdraw-btn">
+                        Withdraw <span class="material-icons">currency_exchange</span>
+                    </button>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="dashboard-item">
+                        <span class="material-icons" style="color: var(--secondary-color);">attach_money</span>
+                        <div class="dashboard-item-value" id="total-earnings">BDT 0.00</div>
+                        <div class="dashboard-item-label">Total Earnings</div>
+                    </div>
+                    <div class="dashboard-item">
+                        <span class="material-icons" style="color: #ffc107;">visibility</span>
+                        <div class="dashboard-item-value" id="ads-watched">0</div>
+                        <div class="dashboard-item-label">Total Ads Watched</div>
+                    </div>
+                </div>
+                <div class="card" style="margin-top: 20px;">
+                    <div class="card-header">
+                        <span class="material-icons">group</span>
+                        Total Referrals
+                    </div>
+                    <div class="dashboard-item-value" id="total-referrals">0</div>
+                </div>
+            </section>
+
+            <!-- UPDATED EARN PAGE START -->
+            <section id="earn-page" class="page">
+                
+                <div class="card" style="padding: 10px; margin-bottom: 20px; background-color: #e3f2fd; border-color: #90caf9;">
+                    <div style="font-size: 13px; color: #0d47a1;">
+                        <span class="material-icons" style="vertical-align: middle; font-size: 16px;">info</span>
+                        প্রতিটি কাজ ১৯২ মিনিট (৩ ঘণ্টা ১২ মিনিট) এর জন্য চালু থাকবে। এরপরের কাজ অটোমেটিক চালু হবে।
+                    </div>
+                </div>
+
+                <!-- 8 Sequential Tasks -->
+                <div id="tasks-container">
+                    <!-- Tasks will be generated by JS -->
+                </div>
+
+                <!-- Telegram Community -->
+                <div class="card">
+                    <h2 class="card-header">
+                        <span class="fa-brands fa-telegram" style="color: #0088cc;"></span>
+                        Join Community
+                    </h2>
+                    <p style="font-size: 14px; color: var(--light-text-color); margin-bottom: 15px;">
+                        Join our channels for updates and payment proofs!
+                    </p>
+                    <a href="https://t.me/earnfreebd24" target="_blank" class="secondary-btn" style="margin-top: 10px; width: 100%;">
+                        <span class="fa-brands fa-telegram" style="color: #0088cc;"></span>
+                        Join Telegram Group
+                    </a>
+                    <a href="https://t.me/AiPixPrompt" target="_blank" class="secondary-btn" style="margin-top: 10px; width: 100%;">
+                        <span class="fa-brands fa-telegram" style="color: #0088cc;"></span>
+                        Join Telegram Channel
+                    </a>
+                </div>
+            </section>
+            <!-- UPDATED EARN PAGE END -->
+            
+            <section id="withdraw-page" class="page">
+                <div class="card">
+                    <h2 class="card-header">
+                        <span class="material-icons">currency_exchange</span>
+                        Withdraw Your Earnings
+                    </h2>
+                    <div class="balance" id="withdraw-balance-display">BDT 0.00</div>
+                    <div class="card-label">Current Balance</div>
+                    <div style="margin-top: 20px; font-size: 14px; color: var(--light-text-color);">
+                        <b>Minimum Withdraw Limits:</b><br>
+                        bKash: BDT 100.00<br>
+                        WebMoney: BDT 500.00
+                    </div>
+                </div>
+                
+                <div class="withdraw-form-container">
+                    <h4 style="margin-top: 0; text-align: left;">Withdraw Details</h4>
+                    <form id="withdraw-form">
+                        <div class="form-group">
+                            <label for="withdraw-method">Withdraw Method</label>
+                            <select id="withdraw-method" required>
+                                <option value="" disabled selected>Select a method</option>
+                                <option value="bkash">bKash (Min 100)</option>
+                                <option value="webmoney">WebMoney (Min 500)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="account-number">Account Number</label>
+                            <input type="text" id="account-number" placeholder="Enter Account Number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="withdraw-amount">Amount (BDT)</label>
+                            <input type="number" id="withdraw-amount" placeholder="Enter amount to withdraw" required>
+                        </div>
+                        <button type="submit" class="primary-btn" id="submit-withdraw-btn">
+                            Submit Withdraw Request
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <section id="profile-page" class="page">
+                <div class="card" style="padding: 30px;">
+                    <div class="profile-pic-container">
+                        <img id="profile-page-pic" src="https://via.placeholder.com/80" alt="Profile Picture" class="profile-pic" onerror="this.src='https://via.placeholder.com/80';">
+                    </div>
+                    <h3 id="profile-user-name" style="margin: 0; font-weight: 600;">User</h3>
+                    <p id="profile-user-username" style="margin: 5px 0 0; color: var(--light-text-color); font-size: 14px;">@telegram</p>
+                    
+                    <div class="user-id-wrapper" style="justify-content: center; margin-top: 5px; font-size: 13px;">
+                        ID: <span id="profile-user-id" style="font-weight: bold; color: var(--primary-color);">...</span>
+                        <span class="material-icons copy-icon" id="profile-copy-btn" title="Copy ID" style="font-size: 15px;">content_copy</span>
+                    </div>
+                </div>
+
+                <div class="profile-info">
+                    <h4 style="margin-top: 0; text-align:left;">My Profile</h4>
+                    <div class="profile-info-row">
+                        <span class="profile-label">Current Balance</span>
+                        <span class="profile-value" id="profile-balance">BDT 0.00</span>
+                    </div>
+                    <div class="profile-info-row">
+                        <span class="profile-label">Total Earnings</span>
+                        <span class="profile-value" id="profile-earnings">BDT 0.00</span>
+                    </div>
+                    <div class="profile-info-row">
+                        <span class="profile-label">Total Ads Watched</span>
+                        <span class="profile-value" id="profile-ads-watched">0</span>
+                    </div>
+                    <div class="profile-info-row">
+                        <span class="profile-label">Total Referrals</span>
+                        <span class="profile-value" id="profile-referrals">0</span>
+                    </div>
+                </div>
+
+                <div class="support-form-container">
+                    <h4 style="margin-top: 0; text-align: left; display:flex; align-items:center;">
+                        <span class="material-icons" style="color: var(--primary-color); margin-right:5px;">support_agent</span>
+                        Support & Help
+                    </h4>
+                    <p style="font-size:12px; color:#666; margin-bottom:15px; text-align:left;">
+                        আপনার কোনো সমস্যা হলে এখানে লিখুন। মেসেজ সরাসরি এডমিন গ্রুপে চলে যাবে।
+                    </p>
+                    <form id="support-form">
+                        <div class="form-group">
+                            <label for="support-message">Message</label>
+                            <textarea id="support-message" placeholder="আপনার সমস্যা বিস্তারিত লিখুন..." required></textarea>
+                        </div>
+                        <button type="submit" class="secondary-btn" id="send-support-btn">
+                            Send Message <span class="material-icons">send</span>
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <nav class="footer-nav">
+            <div class="nav-item active" data-page="home-page">
+                <span class="material-icons">home</span>
+                <span class="nav-item-label">Home</span>
+            </div>
+            <div class="nav-item" data-page="earn-page">
+                <span class="material-icons">play_circle</span>
+                <span class="nav-item-label">Earn</span>
+            </div>
+            <div class="nav-item" data-page="withdraw-page">
+                <span class="fa-solid fa-credit-card"></span>
+                <span class="nav-item-label">Withdraw</span>
+            </div>
+            <div class="nav-item" data-page="profile-page">
+                <span class="material-icons">person</span>
+                <span class="nav-item-label">Profile</span>
+            </div>
+        </nav>
+    </div>
+
+    <!-- NOTICE MODAL -->
+    <div id="task-notice-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal-btn" class="close-modal-btn">&times;</span>
+            <div class="notice-title">📢 গুরুত্বপূর্ণ নোটিশ</div>
+            <div class="notice-body">
+                (Mini App ব্যবহারকারীদের জন্য)<br><br>
+                ▶️ <strong>Start</strong> বাটনে ক্লিক করার পর আপনার সামনে একটি ওয়েবসাইট ওপেন হবে।<br>
+                ⏳ অনুগ্রহ করে সেই ওয়েবসাইটে কমপক্ষে <strong>১০ সেকেন্ড</strong> অপেক্ষা করুন।<br>
+                ⚠️ অ্যাকাউন্ট তৈরি না করলে কোনো পেমেন্ট দেওয়া হবে না।
+            </div>
+            <button id="modal-start-btn" class="primary-btn">
+                Start <span class="material-icons">play_arrow</span>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tg = window.Telegram.WebApp;
+            tg.ready();
+            tg.expand();
+            const userData = tg.initDataUnsafe.user;
+            
+            // --- User ID Logic ---
+            let uniqueUserId;
+            if (userData && userData.id) {
+                uniqueUserId = userData.id;
+            } else {
+                if (!localStorage.getItem('generated_user_id')) {
+                    const randomId = Math.floor(10000000 + Math.random() * 90000000); 
+                    localStorage.setItem('generated_user_id', randomId.toString());
+                }
+                uniqueUserId = localStorage.getItem('generated_user_id');
+            }
+
+            const defaultProfilePic40 = 'https://via.placeholder.com/40';
+            const defaultProfilePic80 = 'https://via.placeholder.com/80';
+
+            const navItems = document.querySelectorAll('.nav-item');
+            const pages = document.querySelectorAll('.page');
+            const startEarningBtn = document.getElementById('start-earning-btn');
+            const withdrawBtn = document.getElementById('withdraw-btn');
+            const tasksContainer = document.getElementById('tasks-container');
+            const noticeModal = document.getElementById('task-notice-modal');
+            const modalStartBtn = document.getElementById('modal-start-btn');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            
+            // --- CONSTANTS & CONFIGURATION ---
+            const TASK_DURATION_MINUTES = 192; // 192 Minutes per task
+            const TASK_DURATION_MS = TASK_DURATION_MINUTES * 60 * 1000;
+            const BOT_TOKEN = '8517755201:AAGyLYbD7wFLR-rldMdBm5uesa6ogKaPQVQ'; 
+            const CHAT_ID = '@earnfreebd24'; 
+            const MIN_BKASH_WITHDRAW = 100;
+            const MIN_WEBMONEY_WITHDRAW = 500;
+
+            // Updated Links
+            const YOUTUBE_LINK = "https://youtube.com/@aiframestory1?si=tzx6vOExDjgoAJzQ";
+            const AD_LINK_1 = "https://www.effectivegatecpm.com/up95hbv6v7?key=120544a3f30d0fce7151a07cac8a30f4";
+            const AD_LINK_2 = "https://www.effectivegatecpm.com/ch689ym0?key=0e197e3a615e2d975fc4082a906ddd33";
+            const AD_LINK_3 = "https://www.effectivegatecpm.com/u48g35c7?key=a8182d67355e7a5481130df6feb71a4d";
+
+            // --- TASK DATA STRUCTURE ---
+            const tasks = [
+                { id: 1, title: "WORK", reward: 0.20, link: AD_LINK_1, type: 'ad', icon: 'public' },
+                { id: 2, title: "NEW WORK 200", reward: 0.20, link: AD_LINK_2, type: 'ad', icon: 'public' },
+                { id: 3, title: "EASY WORK", reward: 0.20, link: AD_LINK_3, type: 'ad', icon: 'public' },
+                { id: 4, title: "JOB TASK 4", reward: 0.20, link: AD_LINK_1, type: 'ad', icon: 'work' },
+                { id: 5, title: "JOB TASK 5", reward: 0.20, link: AD_LINK_2, type: 'ad', icon: 'work' },
+                { id: 6, title: "JOB TASK 6", reward: 0.20, link: AD_LINK_3, type: 'ad', icon: 'work' },
+                { id: 7, title: "BANNER JOB", reward: 0.30, link: AD_LINK_1, type: 'ad', icon: 'camera_alt' }, // Banner Task (Higher Reward)
+                { id: 8, title: "YOUTUBE SUB", reward: 0.30, link: YOUTUBE_LINK, type: 'youtube', icon: 'subscriptions' } // YouTube Task
+            ];
+
+            let pendingTaskUrl = ''; 
+            let pendingRewardAmount = 0; 
+            let activeTimerInterval;
+
+            // Initialize Storage
+            if (!localStorage.getItem('earnings')) localStorage.setItem('earnings', '0');
+            if (!localStorage.getItem('adsWatched')) localStorage.setItem('adsWatched', '0'); 
+            if (!localStorage.getItem('totalReferrals')) localStorage.setItem('totalReferrals', '0');
+            
+            // Timer Logic Initialization
+            if (!localStorage.getItem('cycleStartTime')) {
+                localStorage.setItem('cycleStartTime', Date.now().toString());
+            }
+
+            // --- CORE LOGIC: TIME BASED TASKS ---
+            function getActiveTaskIndex() {
+                const startTime = parseInt(localStorage.getItem('cycleStartTime'));
+                const now = Date.now();
+                const elapsed = now - startTime;
+                
+                // Calculate which task slot we are in (0 to 7)
+                let slot = Math.floor(elapsed / TASK_DURATION_MS);
+                
+                // If we passed all tasks (8 tasks), reset the cycle loop
+                if (slot >= tasks.length) {
+                    // Reset time to now (or calculated offset) to restart loop
+                    // Simple restart:
+                    localStorage.setItem('cycleStartTime', Date.now().toString());
+                    return 0;
+                }
+                
+                return slot;
+            }
+
+            function getTaskRemainingTime() {
+                const startTime = parseInt(localStorage.getItem('cycleStartTime'));
+                const now = Date.now();
+                const elapsed = now - startTime;
+                const slot = Math.floor(elapsed / TASK_DURATION_MS);
+                
+                const nextSlotTime = startTime + ((slot + 1) * TASK_DURATION_MS);
+                const remaining = nextSlotTime - now;
+                return remaining > 0 ? remaining : 0;
+            }
+
+            function formatTime(ms) {
+                const hours = Math.floor(ms / (1000 * 60 * 60));
+                const minutes = Math.floor((ms % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((ms % (1000 * 60)) / 1000);
+                return `${hours}h ${minutes}m ${seconds}s`;
+            }
+
+            // --- RENDER TASKS ---
+            function renderTasks() {
+                tasksContainer.innerHTML = '';
+                const activeIndex = getActiveTaskIndex();
+                
+                tasks.forEach((task, index) => {
+                    // Check if this specific task has click count data
+                    const taskKey = `task_${task.id}_count`;
+                    const currentCount = localStorage.getItem(taskKey) || 0;
+                    
+                    const isLocked = index !== activeIndex;
+                    const isActive = index === activeIndex;
+                    
+                    const card = document.createElement('div');
+                    card.className = `task-card-modern ${isActive ? 'active-task' : 'locked-task'}`;
+                    
+                    // Icon logic
+                    let iconHtml = `<span class="material-icons">${task.icon}</span>`;
+                    if(task.type === 'youtube') iconHtml = `<span class="fa-brands fa-youtube" style="color:red; font-size:14px; margin-right:4px;"></span>`;
+                    
+                    const badgeText = isActive ? 'Active Now' : (index < activeIndex ? 'Expired' : 'Locked');
+                    const badgeClass = isActive ? 'badge-active' : 'badge-locked';
+
+                    card.innerHTML = `
+                        <div class="task-title-modern">
+                            ${task.title}
+                            <span class="status-badge ${badgeClass}">${badgeText}</span>
+                        </div>
+                        <div class="task-meta-modern">
+                            ${iconHtml} International
+                            <span class="task-meta-divider">|</span>
+                            <span class="material-icons">schedule</span> 1 day
+                        </div>
+                        <div class="task-progress-info">
+                            ${currentCount} done of 50
+                        </div>
+                        <div class="task-progress-bg">
+                            <div class="task-progress-fill-modern" style="width: ${(currentCount/50)*100}%"></div>
+                        </div>
+                        <div class="task-price-tag">$ 0.025</div>
+                        ${isActive ? `<div class="timer-display" id="timer-display">Closing in: Calculating...</div>` : ''}
+                    `;
+                    
+                    // Click Event
+                    if (isActive) {
+                         card.addEventListener('click', () => {
+                             if(task.type === 'youtube') {
+                                 handleYoutubeTask(task);
+                             } else {
+                                 initiateTask(task);
+                             }
+                         });
+                    } else {
+                         card.addEventListener('click', () => {
+                             tg.showAlert(`এই কাজটি এখন বন্ধ। পরবর্তী সময়ের জন্য অপেক্ষা করুন।`);
+                         });
+                    }
+
+                    tasksContainer.appendChild(card);
+                });
+                
+                // Start timer update for the active card
+                if(activeTimerInterval) clearInterval(activeTimerInterval);
+                activeTimerInterval = setInterval(() => {
+                    const timerEl = document.getElementById('timer-display');
+                    if(timerEl) {
+                        timerEl.style.display = 'block';
+                        timerEl.textContent = `Time Remaining: ${formatTime(getTaskRemainingTime())}`;
+                        
+                        // If time hits 0, re-render to switch tasks
+                        if(getTaskRemainingTime() <= 1000) {
+                            setTimeout(renderTasks, 1500);
+                        }
+                    }
+                }, 1000);
+            }
+
+            function updateUI() {
+                const earnings = parseFloat(localStorage.getItem('earnings'));
+                const totalAdsWatched = parseInt(localStorage.getItem('adsWatched'));
+                const referrals = parseInt(localStorage.getItem('totalReferrals'));
+                
+                const formattedEarnings = earnings.toFixed(2);
+
+                // Update Profile Info
+                if(userData) {
+                    const fullName = `${userData.first_name || ''} ${userData.last_name || ''}`.trim();
+                    document.getElementById('header-user-name').textContent = fullName || 'User';
+                    document.getElementById('profile-user-name').textContent = fullName || 'User';
+                    document.getElementById('profile-user-username').textContent = userData.username ? `@${userData.username}` : 'No username';
+                    if (userData.photo_url) {
+                        const proxyUrl = 'https://api.allorigins.win/raw?url=';
+                        document.getElementById('header-profile-pic').src = `${proxyUrl}${encodeURIComponent(userData.photo_url)}`;
+                        document.getElementById('profile-page-pic').src = `${proxyUrl}${encodeURIComponent(userData.photo_url)}`;
+                    }
+                }
+
+                document.getElementById('header-user-id').textContent = uniqueUserId;
+                document.getElementById('profile-user-id').textContent = uniqueUserId;
+                document.getElementById('current-balance').textContent = `BDT ${formattedEarnings}`;
+                document.getElementById('total-earnings').textContent = `BDT ${formattedEarnings}`;
+                document.getElementById('ads-watched').textContent = totalAdsWatched;
+                document.getElementById('withdraw-balance-display').textContent = `BDT ${formattedEarnings}`;
+                document.getElementById('profile-balance').textContent = `BDT ${formattedEarnings}`;
+                document.getElementById('profile-earnings').textContent = `BDT ${formattedEarnings}`;
+                document.getElementById('profile-ads-watched').textContent = totalAdsWatched;
+                document.getElementById('profile-referrals').textContent = referrals;
+
+                updateWithdrawButtonState();
+            }
+
+            // --- HANDLERS ---
+            function initiateTask(task) {
+                pendingTaskUrl = task.link;
+                pendingRewardAmount = task.reward;
+                // Save current task ID for counting later
+                localStorage.setItem('pendingTaskId', task.id);
+                noticeModal.classList.add('active');
+            }
+
+            function handleYoutubeTask(task) {
+                // Direct open for YouTube, no modal needed or different modal
+                window.open(task.link, '_blank');
+                setTimeout(() => {
+                    completeTask(task.id, task.reward);
+                }, 5000); // 5 seconds delay for "verification" simulation
+            }
+
+            modalStartBtn.addEventListener('click', () => {
+                noticeModal.classList.remove('active');
+                if(pendingTaskUrl) {
+                    window.open(pendingTaskUrl, '_blank');
+                    // Simulate completion after delay
+                    setTimeout(() => {
+                        const tId = localStorage.getItem('pendingTaskId');
+                        if(tId) completeTask(tId, pendingRewardAmount);
+                    }, 5000);
+                }
+            });
+
+            closeModalBtn.addEventListener('click', () => {
+                noticeModal.classList.remove('active');
+                pendingTaskUrl = ''; 
+            });
+
+            function completeTask(taskId, reward) {
+                let earnings = parseFloat(localStorage.getItem('earnings')) + reward;
+                let totalAds = parseInt(localStorage.getItem('adsWatched')) + 1;
+                
+                // Update specific task count
+                const countKey = `task_${taskId}_count`;
+                let taskCount = parseInt(localStorage.getItem(countKey) || 0) + 1;
+                localStorage.setItem(countKey, taskCount.toString());
+
+                localStorage.setItem('earnings', earnings.toString());
+                localStorage.setItem('adsWatched', totalAds.toString());
+                
+                tg.showAlert(`অভিনন্দন! আপনি BDT ${reward.toFixed(2)} আয় করেছেন!`);
+                updateUI();
+                renderTasks(); // Re-render to show updated progress bar
+            }
+
+            function updateWithdrawButtonState() {
+                const earnings = parseFloat(localStorage.getItem('earnings'));
+                const method = document.getElementById('withdraw-method').value;
+                let currentLimit = MIN_BKASH_WITHDRAW; 
+
+                if (method === 'webmoney') currentLimit = MIN_WEBMONEY_WITHDRAW;
+                
+                const btn = document.getElementById('submit-withdraw-btn');
+                if (earnings < currentLimit) {
+                    btn.disabled = true;
+                    btn.textContent = `ন্যূনতম BDT ${currentLimit} প্রয়োজন`;
+                } else {
+                    btn.disabled = false;
+                    btn.textContent = `Submit Withdraw Request`;
+                }
+            }
+            
+            document.getElementById('withdraw-method').addEventListener('change', updateWithdrawButtonState);
+
+            // Copy Function
+            function copyToClipboard(text) {
+                const textArea = document.createElement("textarea");
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    tg.showAlert("User ID Copied!");
+                } catch (err) {}
+                document.body.removeChild(textArea);
+            }
+            document.getElementById('header-copy-btn').addEventListener('click', () => copyToClipboard(uniqueUserId));
+            document.getElementById('profile-copy-btn').addEventListener('click', () => copyToClipboard(uniqueUserId));
+
+            // Navigation
+            function showPage(targetPageId) {
+                navItems.forEach(nav => nav.classList.remove('active'));
+                pages.forEach(page => page.classList.remove('active'));
+                
+                document.querySelector(`[data-page="${targetPageId}"]`).classList.add('active');
+                document.getElementById(targetPageId).classList.add('active');
+                
+                if(targetPageId === 'earn-page') {
+                    renderTasks(); 
+                    updateUI();
+                }
+                if(targetPageId === 'withdraw-page') updateUI(); 
+            }
+
+            navItems.forEach(item => {
+                item.addEventListener('click', () => showPage(item.getAttribute('data-page')));
+            });
+
+            startEarningBtn.addEventListener('click', () => showPage('earn-page'));
+            withdrawBtn.addEventListener('click', () => showPage('withdraw-page'));
+
+            // Withdraw Form
+            document.getElementById('withdraw-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const amount = parseFloat(document.getElementById('withdraw-amount').value);
+                const method = document.getElementById('withdraw-method').value;
+                const earnings = parseFloat(localStorage.getItem('earnings'));
+                
+                let limit = method === 'webmoney' ? MIN_WEBMONEY_WITHDRAW : MIN_BKASH_WITHDRAW;
+
+                if (amount < limit || amount > earnings) {
+                    tg.showAlert(`Invalid Amount.`);
+                    return;
+                }
+                
+                tg.showConfirm(`Confirm withdraw ${amount} BDT via ${method}?`, (ok) => {
+                    if (ok) {
+                        localStorage.setItem('earnings', (earnings - amount).toString());
+                        
+                        const msg = `💸 *Withdraw Request*\nID: \`${uniqueUserId}\`\nAmount: ${amount}\nMethod: ${method}\nAccount: ${document.getElementById('account-number').value}`;
+                        
+                        fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                            method: 'POST',
+                            headers: {'Content-Type': 'application/json'},
+                            body: JSON.stringify({ chat_id: CHAT_ID, text: msg, parse_mode: 'Markdown' })
+                        });
+
+                        document.getElementById('withdraw-form').reset();
+                        updateUI();
+                        tg.showAlert('Withdraw request submitted.');
+                    }
+                });
+            });
+
+            // Initial Load
+            updateUI();
+            // If on earn page by default/reload, render tasks
+            if(document.getElementById('earn-page').classList.contains('active')) {
+                renderTasks();
+            }
+        });
+    </script>
+    
+    <!-- FOOTER AD SCRIPTS (DO NOT REMOVE) -->
+    <script type="text/javascript" src="https://pl28080969.effectivegatecpm.com/25/91/58/259158ec586075bb49adeb886c65c438.js"></script>
+    <script type="text/javascript">
+      atOptions = {
+        'key' : '9fd21081d4e32b54eac9a5adc4e78cde',
+        'format' : 'iframe',
+        'height' : 50,
+        'width' : 320,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="https://www.highperformanceformat.com/9fd21081d4e32b54eac9a5adc4e78cde/invoke.js"></script>
+    <script type="text/javascript">
+      atOptions = {
+        'key' : '8c1f17019d6eee50f2a467cf4e0504b0',
+        'format' : 'iframe',
+        'height' : 50,
+        'width' : 320,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="https://www.highperformanceformat.com/8c1f17019d6eee50f2a467cf4e0504b0/invoke.js"></script>
+</body>
+</html>
